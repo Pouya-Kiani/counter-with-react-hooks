@@ -1,42 +1,121 @@
 .App {
+  height: 100vh;
+  position: relative;
+  background: rgb(202, 202, 202);
+}
+.app * {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.app-wrapper {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: fit-content;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
-.App-link {
-  color: #61dafb;
+.counter-value {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-size: 65px;
+  font-weight: 600;
+  margin: 45px auto 35px auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 35px;
 }
-
-button {
-  font-size: calc(10px + 2vmin);
+.counter-interval-label {
+  height: 45px;
+}
+.counter-interval-wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.counter-interval {
+  padding: 7px 12px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 16px;
+  border-radius: 3px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+.error {
+  margin-top: -30px;
+  line-height: 30px;
+  color: rgb(236, 96, 14);
+  font-size: 16px;
+  text-align: center;
+}
+.button.in-form {
+  position: absolute;
+  top: 53px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  padding: 3px;
+  font-weight: 600;
+  margin: auto 0;
+  cursor: pointer;
+}
+.button:hover {
+  font-weight: 900;
+}
+.button.in-form:focus {
+  outline: none;
+}
+.button.in-form.increase {
+  right: 45px;
+}
+.button.in-form.decrease {
+  left: 45px;
+}
+.action-buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.action-button {
+  flex: 0 0 50%;
+  padding: 3px 0;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+.action-button:hover {
+  font-weight: 800;
+}
+.action-button:focus {
+  outline: none;
+  opacity: 0.95;
+}
+.action-button:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+.action-button.start {
+  border-right: 1px solid lightgray;
+  border-bottom-left-radius: 15px;
+}
+.action-button.reset {
+  border-left: 1px solid lightgray;
+  border-bottom-right-radius: 15px;
 }
